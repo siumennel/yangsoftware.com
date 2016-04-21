@@ -2,55 +2,100 @@
 <html>
 <head>
 <style type="text/css">
+ html {
+	font-size: 100%;
+}
 
+html, body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
 
+#container {
+	min-height:100%;
+    position:relative;
+	border: 0rem;
+	overflow: auto;
+}
 
-#headerDiv {
-	background-color: blue;
-	margin-top: 10px;
-	margin-bottom: 10px;
+#header {
+	background-color: #E0E0E0;
+	margin-top: 0rem;
+	margin-bottom: 0.5rem;
 	text-align: center;
 }
 
+#main {
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	margin-bottom: 5rem;
+	position:relative;
+}
+
 .frameDiv {
-    max-width: 500px;
-    height: 100px;
-    border: 3px solid #73AD21;
+	display: inline-block;
+	position: relative;
+	top: 0rem;
+	left: 0rem;
+	width: 32%;
+	min-height: 1em;
+	overflow: auto;
+	border: 0.0625rem;
+	border-color: #E0E0E0;
+	border-style: solid;
+	margin: 0px;
+	vertical-align: top;
+	word-wrap: break-word;
 }
 
-#leftDiv {
-	}
-
-#centerDiv {
-	
-	
+.imageDiv {
+	display: inline-block;
+	position: relative;
+	top: 0rem;
+	left: 0rem;
+	overflow: auto;
+	margin: 0px;
+	vertical-align: top;
+	word-wrap: break-word;
+	text-align: center;
+	width:100%;
 }
 
-#rightDiv {
-    
-}
-
-ifrmae {
- 
-  width: 100%;
-  height: 100%;
+#footer {
+	position: absolute;
+	background-color: #E0E0E0;
+	width: 100%;
+	text-align: center;
+	bottom: 0;
+	margin: 0;
 }
 </style>
 <title>Yang Dictonary</title>
 </head>
 <body>
-	<div id="headerDiv">
+	<div id="container">
+		<div id="header">
 			<form method="get" action="http://www.google.com/search" target="txt">
 				find a word <input type="text" name="q" size="40" maxlength="255px" />
 				<input type="submit" name="btnG" value="Search" />
 			</form>
+		</div>
+		<div id="main">
+			<div id="leftDiv" class="frameDiv">
+				Doing is more Difficult than thinking.
+			</div>
+			<div id="centerDiv" class="frameDiv">
+			  To fail is better than thinking.
+			</div>
+			<div id="rightDiv" class="frameDiv">
+				Do it and you will get it.
+			</div>
+			<div id="imageDiv" class="imageDiv">
+				<img alt="MAKE THE WORLD BETTER" src="lavender.jpg">
+			</div>
+		</div>
+		<div id="footer">2016 Yangsoftware.com<img alt="Yang software MAKE THE WORLD BETTER" src="logo.png">  </div>
 	</div>
-		
-
-		<div id="leftDiv" class="frameDiv">
-		   aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-		</div><div id="centerDiv" class="frameDiv">bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</div><div
-		 id="rightDiv" class="frameDiv">ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc</div>
-	
 </body>
 </html>
