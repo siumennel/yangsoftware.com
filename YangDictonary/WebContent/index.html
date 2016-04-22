@@ -19,6 +19,11 @@ html, body {
 	overflow: auto;
 }
 
+h2 {
+  display: inline;
+  color: red;
+}
+
 #header {
 	background-color: #E0E0E0;
 	margin-top: 0rem;
@@ -71,14 +76,24 @@ html, body {
 	margin: 0;
 }
 </style>
-<title>Yang Dictonary</title>
+<script type="text/javascript">
+ function happyGo(){
+	 var q = document.getElementsByName("q")[0];
+	 q.value = "happy+" + q.value;
+	 var google = document.getElementById("google");
+	 google.submit();
+	 q.value = q.value.substring(6, q.value.length);
+	 return false;
+ }
+</script>
+<title>Happy Plus Dictionary</title>
 </head>
 <body>
 	<div id="container">
 		<div id="header">
-			<form method="get" action="http://www.google.com/search" target="txt">
-				find a word <input type="text" name="q" size="40" maxlength="255px" />
-				<input type="submit" name="btnG" value="Search" />
+			<form method="get" action="http://www.google.com/search" id="google" target="blank">
+				<h2>Happy + </h2><input type="text" name="q" size="40" maxlength="255px" />
+				<button id="go"  onclick="return happyGo()" >Search</button>
 			</form>
 		</div>
 		<div id="main">
